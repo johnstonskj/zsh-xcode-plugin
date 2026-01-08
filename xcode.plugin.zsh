@@ -5,7 +5,7 @@
 #
 # Description:
 #
-#   Add one-line description here...
+#   Zsh plugin to add Xcode command line tools to path.
 #
 # Public variables:
 #
