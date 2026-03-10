@@ -1,8 +1,10 @@
 # -*- mode: sh; eval: (sh-set-shell "zsh") -*-
 #
-# Plugin Name: xcode
-# Description: Zsh plugin to add Xcode command line tools to path.
-# Repository: https://github.com/johnstonskj/zsh-xcode-plugin
+# @name: xcode
+# @brief: Add Xcode command-line tools to path.
+# @repository: https://github.com/johnstonskj/zsh-xcode-plugin
+# @version: 0.1.1
+# @license: MIT AND Apache-2.0
 #
 # Public variables:
 #
