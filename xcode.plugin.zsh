@@ -1,8 +1,10 @@
 # -*- mode: sh; eval: (sh-set-shell "zsh") -*-
 #
-# @name xcode
-# @brief Zsh plugin to add Xcode command line tools to path.
-# @repository https://github.com/johnstonskj/zsh-xcode-plugin
+# @name: xcode
+# @brief: Add Xcode command-line tools to path.
+# @repository: https://github.com/johnstonskj/zsh-xcode-plugin
+# @version: 0.1.1
+# @license: MIT AND Apache-2.0
 #
 
 ############################################################################
@@ -15,7 +17,11 @@ xcode_plugin_init() {
 
     if [[ "${OSTYPE}" == [Dd]arwin* ]]; then
         local xcode_path="$(xcode-select -p)"
-        @zplugins_add_to_path xcode "${xcode_path}"
+        if [[ $? -eq 0 ]]; then
+            @zplugins_add_to_path xcode "${xcode_path}"
+        else
+            log_error "zsh-xcode: Error calling xcode-select, could not set path"
+        fi
     fi
 }
 
